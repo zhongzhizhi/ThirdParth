@@ -12,6 +12,7 @@ android {
 //    buildToolsVersion "31.0.0"
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.thirdparty.happychat"
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
@@ -37,7 +38,7 @@ android {
 }
 
 dependencies {
-    
+    implementation 'com.github.tbruyelle:rxpermissions:0.12'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -48,6 +49,7 @@ dependencies {
     implementation Deps.material
     implementation Deps.constraintlayout
 
+    implementation project(path: ':common')
 
 
 }

@@ -1,0 +1,59 @@
+<resources>
+
+    <string name="common_app_name">全语通会译</string>
+    <string name="common_app_desc">世界全语通  全球云办公</string>
+    <string name="common_loading">正在加载中</string>
+    <string name="common_loading_retry">重新加载</string>
+    <string name="common_loading_retry_tips">请刷新页面，或者检查网络后重试！</string>
+    <string name="common_loading_failed">数据加载失败！</string>
+    <string name="common_loading_empty">暂时没有数据哦！</string>
+    <string name="common_loading_doing">正在加载中…</string>
+
+    <string name="common_http_exception1">请求失败，请稍后重试</string>
+    <string name="common_http_exception2">网络有点问题，请检查后再试！</string>
+    <string name="common_http_exception3">数据解析异常</string>
+    <string name="common_http_exception4">参数错误</string>
+    <string name="common_http_exception5">未知错误</string>
+    <string name="common_push_disconnect">服务器连接断开，请稍后再试</string>
+
+    <string name="common_again_press_exit">再按一次退出</string>
+
+    <string name="common_dialog_prompt">提示</string>
+    <string name="common_dialog_tips">温馨提示</string>
+    <string name="common_dialog_single_btn_sure">好的！</string>
+    <string name="common_dialog_btn_sure">确定</string>
+    <string name="common_dialog_btn_cancel">取消</string>
+
+    <string name="common_login_conflict_content">您的账号在其他设备上登录，请确认是否本人操作，及时修改密码</string>
+    <string name="common_login_conflict_myself_operate">是我在操作</string>
+    <string name="common_login_conflict_reLogin">不是我，重新登录</string>
+    <string name="common_fast_meet_dialog_content">“%s”邀请你参加会议</string>
+    <string name="common_fast_meet_dialog_deal_later">稍后处理</string>
+    <string name="common_fast_meet_dialog_enter_now">立即进入</string>
+    <string name="common_fast_meet_already_finish">会议已结束</string>
+
+    <string name="common_privacy_policy_and_protocol">用户使用协议及隐私政策</string>
+    <string name="common_app_policy_content">亲爱的用户，我们更新了用户使用协议与隐私政策，本次更新进一步明确了我们将如何收集、使用、共享和存储您的个人信息，包括具体的信息类型和使用方式；以更全面、清晰的方式告知您的权利；增加了多项保护个人信息的制度和举措；如安全事件通知、未成年人保护等。请您务必仔细阅读并充分理解相关条款（可在“会员中心”页面底部查看）。当您点击同意，并开始使用产品或服务，即表示您已经理解并同意该条款，该条款将成为对您具有约束力的法律文件。\n\n 《用户使用协议》 《隐私政策》</string>
+    <string name="common_user_protocol">用户协议</string>
+    <string name="common_privacy_policy">隐私政策</string>
+    <string name="common_user_protocol_">《用户协议》</string>
+    <string name="common_privacy_policy_">《隐私政策》</string>
+    <string name="common_user_protocol_no_access">退出应用</string>
+    <string name="common_user_protocol_access">同意</string>
+    <string name="common_company_copyright">深圳双猴科技有限公司 版权所有</string>
+
+    <string name="common_permission_go_setting">去授权</string>
+    <string name="common_permission_handle_open">用户选择了权限不再提示按钮，需要手动去开启权限</string>
+
+    <string name="common_stop_screen_share">停止共享</string>
+
+    <string name="common_account_has_disable">"该账户已被禁用，请联系管理员！"</string>
+
+    <string name="common_unit_year">年</string>
+    <string name="common_unit_month">月</string>
+    <string name="common_unit_day">日</string>
+    <string name="common_unit_hour">时</string>
+    <string name="common_unit_minute">分</string>
+    <string name="common_unit_second">秒</string>
+
+</resources>

@@ -1,19 +1,21 @@
 import com.thirdparty.dependencies.Deps
+import com.thirdparty.dependencies.Versions
 
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    compileSdkVersion Versions.compileSdk
+//    buildToolsVersion "31.0.0"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Versions.versionCode
+        versionName Versions.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -32,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -41,5 +47,44 @@ dependencies {
     implementation Deps.appcompat
     implementation Deps.material
     implementation Deps.constraintlayout
+    api Deps.logger
+
+    api Deps.glide
+    kapt Deps.glide_compiler
+
+    api Deps.room_runtime
+    api Deps.room_ktx
+    kapt Deps.room_compiler
+
+    api Deps.baseRecyclerViewAdapterHelper
+    api Deps.rxpermission
+    api Deps.rxjava
+
+    //jetpack
+    api Deps.lifecycle_runtime
+    api Deps.lifecycle_runtime_ktx
+    api Deps.lifecycle_extensions
+    api Deps.lifecycle_common_java8
+    api Deps.lifecycle_viewmodel
+    api Deps.lifecycle_viewmodel_ktx
+    api Deps.lifecycle_livedata
+    api Deps.lifecycle_livedata_ktx
+
+    //coroutines
+    api Deps.kotlinx_coroutines_core
+    api Deps.coroutines_android
+
+    //refresh
+    api Deps.smart_refresh_kernel
+    api Deps.smart_refresh_footer
+    api Deps.smart_refresh_header
+
+    //retrofit
+    api Deps.retrofit
+    api Deps.retrofit_converter_gson
+    api Deps.retrofit_adapter_rxjava
+    api Deps.okhttp_logging_interceptor
+    api Deps.rxandroid
+    api Deps.fastjson
 
 }
