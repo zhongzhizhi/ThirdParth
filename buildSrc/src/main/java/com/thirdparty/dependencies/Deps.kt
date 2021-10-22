@@ -60,6 +60,7 @@ object Versions {
     const val smart_refresh = "2.0.1"
     const val rxjava_version = "3.1.2"
     const val fastjson_version = "1.2.60"
+    const val websocket_version = "1.5.0"
 
     //jetpack
     const val lifecycle_runtime_version = "2.2.0"
@@ -140,6 +141,10 @@ object Deps {
     const val smart_refresh_header = "com.scwang.smart:refresh-header-classics:${Versions.smart_refresh}"
     const val rxjava = "io.reactivex.rxjava3:rxjava:${Versions.rxjava_version}"
     const val fastjson = "com.alibaba:fastjson:${Versions.fastjson_version}"
+
+
+    //websocket
+    const val websocket = "org.java-websocket:Java-WebSocket:${Versions.websocket_version}"
 
     //my
     const val logger = "com.dosmono.library:logger:1.1.6"

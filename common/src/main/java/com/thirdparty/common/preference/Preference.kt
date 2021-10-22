@@ -17,7 +17,7 @@ class Preference<T>(val name: String, private val default: T) {
         private val file_name = "biz_file"
 
         private val prefs: SharedPreferences by lazy {
-            GlobalApplication.getApplicationContext().getSharedPreferences(file_name, Context.MODE_PRIVATE)
+            GlobalApplication.getContext().getSharedPreferences(file_name, Context.MODE_PRIVATE)
         }
 
         /**

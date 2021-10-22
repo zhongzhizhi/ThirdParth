@@ -49,6 +49,9 @@ dependencies {
     implementation Deps.constraintlayout
     api Deps.logger
 
+    //websocket
+    implementation Deps.websocket
+
     api Deps.glide
     kapt Deps.glide_compiler
 
@@ -86,5 +89,6 @@ dependencies {
     api Deps.okhttp_logging_interceptor
     api Deps.rxandroid
     api Deps.fastjson
+
 
 }

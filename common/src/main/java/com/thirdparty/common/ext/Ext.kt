@@ -42,7 +42,7 @@ inline fun View.antiShakeClickListener(crossinline block: (view: View)->Unit){
     }
 }
 
-fun String.toast(context: Context = GlobalApplication.getApplicationContext(), duration: Int = Toast.LENGTH_SHORT){
+fun String.toast(context: Context = GlobalApplication.getContext(), duration: Int = Toast.LENGTH_SHORT){
     if (mToast == null){
         mToast = Toast.makeText(context,this,duration)
     }else{
@@ -51,7 +51,7 @@ fun String.toast(context: Context = GlobalApplication.getApplicationContext(), d
     mToast?.show()
 }
 
-fun Int.toast(context: Context = GlobalApplication.getApplicationContext(),duration: Int = Toast.LENGTH_SHORT){
+fun Int.toast(context: Context = GlobalApplication.getContext(),duration: Int = Toast.LENGTH_SHORT){
     if (mToast == null){
         mToast = Toast.makeText(context,this,duration)
     }else{
@@ -64,22 +64,22 @@ fun Int.dip2px(): Int {
 //    val density = DosmonoApplication.getDosmonoContext().resources.displayMetrics.density
 //    return (this*density+0.5f).toInt()
 
-    return (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,this+0.5f,GlobalApplication.getApplicationContext().resources.displayMetrics)+0.5f).toInt()
+    return (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,this+0.5f,GlobalApplication.getContext().resources.displayMetrics)+0.5f).toInt()
 }
 
 fun Int.px2dip(): Int{
 //    val density = DosmonoApplication.getDosmonoContext().resources.displayMetrics.density
 //    return (this/density+0.5f).toInt()
 
-    return (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,this+0.5f,GlobalApplication.getApplicationContext().resources.displayMetrics)+0.5f).toInt()
+    return (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,this+0.5f,GlobalApplication.getContext().resources.displayMetrics)+0.5f).toInt()
 }
 
 fun Int.sp2px(): Float{
-    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,this+0.5f,GlobalApplication.getApplicationContext().resources.displayMetrics)+0.5f
+    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,this+0.5f,GlobalApplication.getContext().resources.displayMetrics)+0.5f
 }
 
 fun Int.px2sp(): Float{
-    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,this+0.5f,GlobalApplication.getApplicationContext().resources.displayMetrics)+0.5f
+    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,this+0.5f,GlobalApplication.getContext().resources.displayMetrics)+0.5f
 }
 
 inline fun <VB: ViewBinding> Any.getViewBinding(inflater: LayoutInflater): VB{

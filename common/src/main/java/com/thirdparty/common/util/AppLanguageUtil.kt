@@ -34,7 +34,7 @@ object AppLanguageUtil {
     }
 
     fun switchAppLanguage(locale: Locale){
-        val resource = GlobalApplication.getApplicationContext().resources
+        val resource = GlobalApplication.getContext().resources
         val configuration = resource.configuration
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             configuration.setLocale(locale)
@@ -72,9 +72,9 @@ object AppLanguageUtil {
 
     fun getLocal(): Locale{
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            GlobalApplication.getApplicationContext().resources.configuration.locales[0]
+            GlobalApplication.getContext().resources.configuration.locales[0]
         }else{
-            GlobalApplication.getApplicationContext().resources.configuration.locale
+            GlobalApplication.getContext().resources.configuration.locale
         }
     }
 }

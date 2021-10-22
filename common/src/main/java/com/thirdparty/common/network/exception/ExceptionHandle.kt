@@ -22,7 +22,7 @@ class ExceptionHandle {
     companion object {
         private const val TAG = "ExceptionHandle"
         private var errorCode = ErrorStatus.UNKNOWN_ERROR
-        private var errorMsg = GlobalApplication.getApplicationContext().getString(R.string.common_http_exception1)
+        private var errorMsg = GlobalApplication.getContext().getString(R.string.common_http_exception1)
 
         fun handleException(e: Throwable): String {
             e.printStackTrace()
@@ -31,23 +31,23 @@ class ExceptionHandle {
                     || e is HttpException
             ) { //均视为网络错误
                 Logger.e("网络连接异常: ${e.message}")
-                errorMsg = GlobalApplication.getApplicationContext().getString(R.string.common_http_exception2)
+                errorMsg = GlobalApplication.getContext().getString(R.string.common_http_exception2)
                 errorCode = ErrorStatus.NETWORK_ERROR
             } else if (/*e is JsonParseException ||*/ e is JSONException
                     || e is ParseException
             ) {   //均视为解析错误
                 Logger.e("数据解析异常: ${e.message}")
-                errorMsg = GlobalApplication.getApplicationContext().getString(R.string.common_http_exception3)
+                errorMsg = GlobalApplication.getContext().getString(R.string.common_http_exception3)
                 errorCode = ErrorStatus.SERVER_ERROR
             } else if (e is ApiException) {//服务器返回的错误信息
                 errorMsg = e.message.toString()
                 errorCode = ErrorStatus.SERVER_ERROR
             } else if (e is UnknownHostException) {
                 Logger.e("网络连接异常: ${e.message}")
-                errorMsg = GlobalApplication.getApplicationContext().getString(R.string.common_http_exception2)
+                errorMsg = GlobalApplication.getContext().getString(R.string.common_http_exception2)
                 errorCode = ErrorStatus.NETWORK_ERROR
             } else if (e is IllegalArgumentException) {
-                errorMsg = GlobalApplication.getApplicationContext().getString(R.string.common_http_exception4)
+                errorMsg = GlobalApplication.getContext().getString(R.string.common_http_exception4)
                 errorCode = ErrorStatus.SERVER_ERROR
             } else {//未知错误
                 try {
@@ -55,7 +55,7 @@ class ExceptionHandle {
                 } catch (e1: Exception) {
                     Logger.e("未知错误Debug调试: ${e.message}")
                 }
-                errorMsg = GlobalApplication.getApplicationContext().getString(R.string.common_http_exception5)
+                errorMsg = GlobalApplication.getContext().getString(R.string.common_http_exception5)
                 errorCode = ErrorStatus.UNKNOWN_ERROR
             }
             return errorMsg

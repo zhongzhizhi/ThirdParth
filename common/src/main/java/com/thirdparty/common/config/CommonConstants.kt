@@ -12,4 +12,6 @@ package com.thirdparty.common.config
 object CommonConstants {
 
     const val HTTP_ROOT_URL = "https://meet.smart0.cn/"
+    const val WS_URL = ""
+    const val WEBSOCKET_CMD = 29
 }
