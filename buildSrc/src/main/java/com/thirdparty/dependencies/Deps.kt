@@ -71,6 +71,7 @@ object Versions {
     const val lifecycle_viewmodel_ktx_version = "2.3.0-alpha05"
     const val lifecycle_livedata_version = "2.2.0"
     const val lifecycle_livedata_ktx_version = "2.3.0-alpha05"
+    const val lifecycle_navigation_version = "2.3.0"
 }
 
 object Deps {
@@ -108,6 +109,8 @@ object Deps {
     const val lifecycle_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_viewmodel_ktx_version}"
     const val lifecycle_livedata = "androidx.lifecycle:lifecycle-livedata:${Versions.lifecycle_livedata_version}"
     const val lifecycle_livedata_ktx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle_livedata_ktx_version}"
+    const val lifecycle_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${Versions.lifecycle_navigation_version}"
+    const val lifecycle_ui_ktx = "androidx.navigation:navigation-ui-ktx:${Versions.lifecycle_navigation_version}"
 
 
     // network

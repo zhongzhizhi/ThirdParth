@@ -6,10 +6,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.viewbinding.ViewBinding
 import com.tbruyelle.rxpermissions3.RxPermissions
+import com.thirdparty.common.ext.getViewBinding
 import com.thirdparty.common.viewmodel.SharedViewModel
 
 
@@ -21,7 +24,7 @@ import com.thirdparty.common.viewmodel.SharedViewModel
  *  @创建时间:  2020/10/13 17:46
  *  @描述：    TODO
  */
-abstract class BaseFragment<T: BaseViewModel> : Fragment() {
+abstract class BaseFragment<T: BaseViewModel>(@LayoutRes contentLayoutId: Int) : Fragment(contentLayoutId) {
     private val mRxPermissions by lazy { RxPermissions(this) }
     protected var mActivity: AppCompatActivity? = null
     protected lateinit var mSharedViewModel: SharedViewModel
@@ -42,14 +45,6 @@ abstract class BaseFragment<T: BaseViewModel> : Fragment() {
         super.onCreate(savedInstanceState)
         mSharedViewModel = getAppViewModelProvider().get(SharedViewModel::class.java)
         mViewModel = createViewModel()
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(initContentView(),container,false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -133,7 +128,6 @@ abstract class BaseFragment<T: BaseViewModel> : Fragment() {
 //        }.show()
     }
 
-    abstract fun initContentView(): Int
 
     abstract fun initData(savedInstanceState: Bundle?)
 

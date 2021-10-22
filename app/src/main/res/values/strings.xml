@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HappyChat</string>
+
+    <string name="app_tab_home">首页</string>
+    <string name="app_tab_blog">公众号</string>
+    <string name="app_tab_search">搜索</string>
+    <string name="app_tab_project_type">项目分类</string>
+    <string name="app_tab_me">我</string>
 </resources>
