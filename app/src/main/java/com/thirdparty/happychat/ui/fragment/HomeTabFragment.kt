@@ -23,10 +23,6 @@ class HomeTabFragment : BaseFragment<BaseViewModel>(R.layout.fragment_home_tab) 
     private val mViewBinding: FragmentHomeTabBinding by bindView()
 
     override fun initData(savedInstanceState: Bundle?) {
-
-
-
-
         initViewPager()
         mViewBinding.navView.setOnNavigationItemSelectedListener(onNavigationItemSelected)
     }
